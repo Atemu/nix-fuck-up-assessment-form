@@ -9,4 +9,4 @@ alfa.png: alfa.pdf
 clean: alfa.latex
 	latexmk -CA $<
 
-.PHONY: all clean alfa.pdf alfa.png
+.PHONY: all clean alfa.pdf
