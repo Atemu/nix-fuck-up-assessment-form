@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\usepackage{graphicx}  % for SVG logo
+\usepackage{tabularx}  % for tables
+\usepackage{amssymb}   % \square
+\usepackage{enumitem}  % itemize
+\usepackage{calc}      % calculating sizes
+\usepackage[margin=1in,top=0.5in]{geometry}         % reduce margins
+\usepackage[pdftex, pdfauthor={Håvard Pettersson},  % set pdf metadata
+            pdftitle={Arch Linux Fuck-up Assessment Form}]{hyperref}
+
+\renewcommand{\familydefault}{\sfdefault}  % sans serif
+\pagenumbering{gobble}                     % no page numbers
+\setlength{\parindent}{0pt}                % disable paragraph indent
+
+\def\svgwidth{0.6\columnwidth}
+\title{\input{arch-logo.pdf_tex}\hspace{-0.39\columnwidth}Fuck-up Assessment Form}
+
+\author{}
+\date{\vspace{-3.5em}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\texttt{<@phrik> Welcome to \#archlinux, tell us how you fucked up.}
+\end{center}
+
+\vspace{1em}
+\textbf{IRC nickname:} \dotfill
+\ \textbf{Date and time of fuck-up:} \dotfill
+\vspace{0.5em}
+
+\def\arraystretch{1.5}  % increase vertical table size
+\begin{tabularx}{\textwidth}{|llllX|}
+\hline
+\multicolumn{5}{|l|}{\textbf{What emotions were going through your head upon fucking up?} (check all that apply)} \\ \hline
+\(\square\) Apathy & \(\square\) Nerdrage & \(\square\) Wah wah wah & \(\square\) Amplified IRC elitism & \(\square\) Desire to install Ubuntu \\
+\multicolumn{5}{|l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
+\end{tabularx}
+
+\vspace{0.5em}
+
+% there's probably a way easier method to align the two
+% "I (didn't) listen(ed) to" points but this works
+\newlength{\listenedwidth}
+\newlength{\didntlistenwidth}
+\settowidth{\listenedwidth}{I listened to}
+\settowidth{\didntlistenwidth}{I didn't listen to}
+
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\textbf{What initially caused your fuck-up to occur?} (check all that apply) \\ \hline
+\vspace{-8pt}
+\begin{enumerate}[label={\(\square\)},noitemsep,topsep=0pt,leftmargin=*]
+    \item systemd
+    \item \texttt{pacman -Sy <package>}
+    \item \texttt{pacman -S --force <package>}
+    \item The AUR
+    \item I used yaourt
+    \item I installed \dotfill (packages)
+    \item I ran \texttt{dd} and now my computer won't boot
+    \item I didn't look it up on the Arch Wiki
+    \item I looked it up on the Debian Wiki
+    \item Allan broke it
+    \item I tried deleting a file named {\raise.17ex\hbox{\(\sim\)}}
+    \item My root partition is btrfs
+    \item I used an installation script
+    \item I forgot the root password
+    \item I saved the root password in a text file only readable by root
+    \item I copy-pasted commands from an abandoned online discussion forum
+    \item I tried setting up a printer and now lp0 is on fire
+    \item I couldn't find \texttt{\#archlinux}
+    \item I took \texttt{\#archlinux-offtopic} seriously
+    \item I listened to \makebox[7em+\didntlistenwidth-\listenedwidth]{\dotfill} (IRC nick)
+    \item I didn't listen to \makebox[7em]{\dotfill} (IRC nick)
+    \item I tried to be funny in IRC and got banned
+    \item I put my swap file in \texttt{/tmp}
+    \item I installed LUKS with a detached header and my mom washed the pants with the USB stick in them
+    \item I don't know, but it wasn't my fault
+    \item Other (please specify): \dotfill \vspace*{-\baselineskip}
+\end{enumerate} \\ \hline
+\end{tabularx}
+
+\vspace{0.5em}
+
+\begin{tabularx}{\textwidth}{|lllX|}
+\hline
+\multicolumn{4}{|l|}{\textbf{What have you tried so far to remedy your fuck-up?} (check all that apply)} \\ \hline
+\(\square\) \texttt{pacman -Syu} & \(\square\) Rebooting & \(\square\) Reinstalling Arch Linux & \(\square\) Installing Gentoo \\
+\(\square\) Crying & \(\square\) Crying in IRC & \multicolumn{2}{l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
+\end{tabularx}
+
+\vspace*{\fill}
+\begin{center}
+Please return completed form to \texttt{/dev/null} in order for your fuck-up to be assessed by a professional.
+\end{center}
+
+\end{document}
