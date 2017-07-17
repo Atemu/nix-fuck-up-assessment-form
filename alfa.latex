@@ -32,11 +32,18 @@
 \vspace{0.5em}
 
 \def\arraystretch{1.5}  % increase vertical table size
-\begin{tabularx}{\textwidth}{|llllX|}
+\begin{tabularx}{\textwidth}{|lllX|}
 \hline
-\multicolumn{5}{|l|}{\textbf{What emotions were going through your head upon fucking up?} (check all that apply)} \\ \hline
-\(\square\) Apathy & \(\square\) Nerdrage & \(\square\) Wah wah wah & \(\square\) Amplified IRC elitism & \(\square\) Desire to install Ubuntu \\
-\multicolumn{5}{|l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
+\multicolumn{4}{|l|}{\textbf{What emotions were going through your head upon fucking up?} (check all that apply)} \\ \hline
+\(\square\) Panic &
+\(\square\) Remorse &
+\(\square\) Amplified IRC elitism &
+\(\square\) Fear, uncertainty and doubt \\
+
+\(\square\) Nerdrage &
+\(\square\) Wah wah wah &
+\(\square\) Desire to install Ubuntu &
+\(\square\) Other (please specify): \dotfill \\ \hline
 \end{tabularx}
 
 \vspace{0.5em}
@@ -87,8 +94,14 @@
 \begin{tabularx}{\textwidth}{|lllX|}
 \hline
 \multicolumn{4}{|l|}{\textbf{What have you tried so far to remedy your fuck-up?} (check all that apply)} \\ \hline
-\(\square\) \texttt{pacman -Syu} & \(\square\) Rebooting & \(\square\) Reinstalling Arch Linux & \(\square\) Installing Gentoo \\
-\(\square\) Crying & \(\square\) Crying in IRC & \multicolumn{2}{l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
+\(\square\) \texttt{pacman -Syu} &
+\(\square\) Rebooting &
+\(\square\) Reinstalling Arch Linux &
+\(\square\) Installing Gentoo \\
+
+\(\square\) Crying &
+\(\square\) Crying in IRC &
+\multicolumn{2}{l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
 \end{tabularx}
 
 \vspace*{\fill}
