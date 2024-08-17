@@ -1,12 +1,12 @@
-all: alfa.pdf
+all: form.pdf
 
-alfa.pdf: alfa.latex
+form.pdf: form.tex
 	latexmk -pdf -shell-escape $<
 
-alfa.png: alfa.pdf
+form.png: form.pdf
 	convert -density 150 -flatten $< $@
 
-clean: alfa.latex
+clean: form.tex
 	latexmk -CA $<
 
-.PHONY: all clean alfa.pdf
+.PHONY: all clean form.pdf
