@@ -6,15 +6,15 @@
 \usepackage{enumitem}  % itemize
 \usepackage{calc}      % calculating sizes
 \usepackage[margin=1in,top=0.5in]{geometry}         % reduce margins
-\usepackage[pdftex, pdfauthor={Håvard Pettersson},  % set pdf metadata
-            pdftitle={Arch Linux Fuck-up Assessment Form}]{hyperref}
+\usepackage[pdftex, pdfauthor={Atemu},  % set pdf metadata
+            pdftitle={Nix Fuck-up Assessment Form}]{hyperref}
 
 \renewcommand{\familydefault}{\sfdefault}  % sans serif
 \pagenumbering{gobble}                     % no page numbers
 \setlength{\parindent}{0pt}                % disable paragraph indent
 
 \def\svgwidth{0.6\columnwidth}
-\title{\input{arch-logo.pdf_tex}\hspace{-0.39\columnwidth}Fuck-up Assessment Form}
+\title{\input{arch-logo.pdf_tex}\hspace{-0.39\columnwidth}Fuck-up Assessment Form} % TODO Nix logo
 
 \author{}
 \date{\vspace{-3.5em}}
@@ -23,11 +23,11 @@
 \maketitle
 
 \begin{center}
-\texttt{<@phrik> Welcome to \#archlinux, tell us how you fucked up.}
+\texttt{Welcome to Nixpkgs, tell us how you fucked up.}
 \end{center}
 
 \vspace{1em}
-\textbf{IRC nickname:} \dotfill
+\textbf{Github nickname:} \dotfill
 \ \textbf{Date and time of fuck-up:} \dotfill
 \vspace{0.5em}
 
@@ -60,30 +60,36 @@
 \textbf{What initially caused your fuck-up to occur?} (check all that apply) \\ \hline
 \vspace{-8pt}
 \begin{enumerate}[label={\(\square\)},noitemsep,topsep=0pt,leftmargin=*]
-    \item systemd
-    \item \texttt{pacman -Sy <package>}
-    \item \texttt{pacman -S --force <package>}
-    \item The AUR
-    \item I used yaourt
-    \item I installed \dotfill (packages)
-    \item I ran \texttt{dd} and now my computer won't boot
-    \item I didn't look it up on the Arch Wiki
-    \item I looked it up on the Debian Wiki
-    \item Allan broke it
-    \item I tried deleting a file named {\raise.17ex\hbox{\(\sim\)}}
-    \item My root partition is btrfs
-    \item I used an installation script
-    \item I forgot the root password
-    \item I saved the root password in a text file only readable by root
-    \item I copy-pasted commands from an abandoned online discussion forum
+    \item Nvidia.
+    \item \texttt{nixos-rebuild switch}
+    \item \texttt{nix-env -i package}
+    \item I used flakes
+    \item I set \dotfill (NixOS options)
+    \item I used mixed channels
+    \item I used home-manager
+    \item I looked it up on \dotfill (official Nix documentation sources)
+    \item I looked it up on the old NixOS Wiki
+    \item I looked it up on the Arch Wiki
+    % \item Eelco broke it
+    \item I re-mounted \texttt{/nix} read-write
+    \item I used impermanence and all of my files are gone
+    \item My PR got nitpicked to death for no reason
+    \item My root partition is bcachefs
+    \item I used global \texttt{with}
+    \item I used Nix remote builds
+    \item I copied a secret to the Nix store
+    \item I copy-pasted commands for an FHS distro
+    \item I pinged all code-owners and my PR was closed
     \item I tried setting up a printer and now lp0 is on fire
-    \item I couldn't find \texttt{\#archlinux}
-    \item I took \texttt{\#archlinux-offtopic} seriously
-    \item I listened to \makebox[7em+\didntlistenwidth-\listenedwidth]{\dotfill} (IRC nick)
-    \item I didn't listen to \makebox[7em]{\dotfill} (IRC nick)
-    \item I tried to be funny in IRC and got banned
-    \item I put my swap file in \texttt{/tmp}
-    \item I installed LUKS with a detached header and my mom washed the pants with the USB stick in them
+    \item I took the subreddit seriously
+    \item I mentioned Anduril
+    \item I listened to \makebox[7em+\didntlistenwidth-\listenedwidth]{\dotfill} (Github handle)
+    \item I didn't listen to \makebox[7em]{\dotfill} (Github handle)
+    % \item I tried to be funny on Discourse and got banned
+    \item I put my swap on ZFS
+    % \item I installed LUKS with a detached header and my mom washed the pants with the USB stick in them
+    \item I attempted to use the project root as src for flakes and non-flakes
+      for a novelty fuckup assessment form
     \item I don't know, but it wasn't my fault
     \item Other (please specify): \dotfill \vspace*{-\baselineskip}
 \end{enumerate} \\ \hline
@@ -94,13 +100,13 @@
 \begin{tabularx}{\textwidth}{|lllX|}
 \hline
 \multicolumn{4}{|l|}{\textbf{What have you tried so far to remedy your fuck-up?} (check all that apply)} \\ \hline
-\(\square\) \texttt{pacman -Syu} &
+\(\square\) \texttt{nixos-rebuild switch} &
 \(\square\) Rebooting &
-\(\square\) Reinstalling Arch Linux &
+\(\square\) Reinstalling NixOS &
 \(\square\) Installing Gentoo \\
 
 \(\square\) Crying &
-\(\square\) Crying in IRC &
+\(\square\) Crying on Matrix &
 \multicolumn{2}{l|}{\(\square\) Other (please specify): \dotfill} \\ \hline
 \end{tabularx}
 
