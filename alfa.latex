@@ -5,6 +5,7 @@
 \usepackage{amssymb}   % \square
 \usepackage{enumitem}  % itemize
 \usepackage{calc}      % calculating sizes
+\usepackage{svg}       % svg
 \usepackage[margin=1in,top=0.5in]{geometry}         % reduce margins
 \usepackage[pdftex, pdfauthor={Atemu},  % set pdf metadata
             pdftitle={Nix Fuck-up Assessment Form}]{hyperref}
@@ -14,7 +15,7 @@
 \setlength{\parindent}{0pt}                % disable paragraph indent
 
 \def\svgwidth{0.6\columnwidth}
-\title{\input{arch-logo.pdf_tex}\hspace{-0.39\columnwidth}Fuck-up Assessment Form} % TODO Nix logo
+\title{\includesvg{nixos.svg}\hspace{-0.39\columnwidth}Fuck-up Assessment Form}
 
 \author{}
 \date{\vspace{-3.5em}}

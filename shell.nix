@@ -9,6 +9,8 @@ pkgs.mkShell {
       p.svg
       p.trimspaces
       p.transparent
+      p.catchfile
     ]))
+    inkscape
   ];
 }

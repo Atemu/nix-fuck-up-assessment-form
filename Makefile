@@ -1,7 +1,7 @@
 all: alfa.pdf
 
 alfa.pdf: alfa.latex
-	latexmk -pdf $<
+	latexmk -pdf -shell-escape $<
 
 alfa.png: alfa.pdf
 	convert -density 150 -flatten $< $@
