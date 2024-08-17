@@ -21,7 +21,7 @@
       in
       {
         packages = {
-          form = pkgs.callPackage ./package.nix { inherit self; };
+          form = pkgs.callPackage ./package.nix { };
 
           default = self.packages.${system}.form;
         };

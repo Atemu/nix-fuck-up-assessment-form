@@ -3,13 +3,18 @@
   stdenv,
   texliveSmall,
   inkscape,
-  self ? null,
+  runCommand,
 }:
 
 stdenv.mkDerivation {
   name = "nix-fuckup-assessment-form.pdf";
 
-  src = if self != null then self else builtins.fetchGit ./.;
+  src = let
+    # Only copy a select few files, not the entire tree that includes Nix code
+    files = [ "Makefile" "form.tex" "nixos.svg" ];
+    commands = map (file: "install ${./${file}} -D $out/${file}") files;
+    script = lib.concatLines commands;
+  in runCommand "source" { } script;
 
   nativeBuildInputs = [
     (texliveSmall.withPackages (p: [
